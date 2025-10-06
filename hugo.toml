@@ -1,7 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://wasabina67.github.io/poem-blog/'
 languageCode = 'en-us'
 title = 'My Blog'
 theme = 'PaperMod'
+publishDir = 'docs'
 
 [params]
   ShowReadingTime = true
