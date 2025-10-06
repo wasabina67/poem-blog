@@ -1,6 +1,12 @@
 # poem-blog
 Poem blog
 
+## setup
+
+```bash
+git submodule update --init --recursive
+```
+
 ## dev
 
 ```bash
