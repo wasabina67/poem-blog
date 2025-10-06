@@ -10,5 +10,5 @@ hugo server -D
 ## build
 
 ```bash
-hugo --gc --minify
+hugo --gc --minify && git add -A && git commit -m "build"
 ```
