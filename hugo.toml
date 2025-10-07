@@ -23,7 +23,7 @@ publishDir = 'docs'
 
 [params.homeInfoParams]
   Title = "Welcome to Poem blog"
-  Content = "content"
+  Content = "This Poem blog is a collection of poetry and creative writing. Explore and enjoy!"
 
 [menu]
   [[menu.main]]
