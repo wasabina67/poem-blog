@@ -4,6 +4,11 @@ title = 'Poem blog'
 theme = 'PaperMod'
 publishDir = 'docs'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+
 [params]
   ShowReadingTime = true
   ShowShareButtons = true
