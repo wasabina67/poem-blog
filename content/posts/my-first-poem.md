@@ -6,4 +6,17 @@ tags = []
 categories = []
 +++
 
-tmp
+The sun rises in the morning sky,
+Birds are singing, flying high.
+I wake up with a happy smile,
+Ready to walk another mile.
+
+The grass is green, the flowers bloom,
+Colors chase away the gloom.
+I take a breath of fresh, clean air,
+Life is beautiful everywhere.
+
+Friends will laugh and play with me,
+Together we are strong and free.
+Every day brings something new,
+Dreams can come if we stay true.
