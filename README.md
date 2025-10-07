@@ -20,3 +20,27 @@ hugo server -D
 ```bash
 hugo --gc --minify && git add -A && git commit -m "build"
 ```
+
+## uv
+
+### Install dependencies
+
+```bash
+uv sync
+```
+
+### ruff, black
+
+```bash
+uv run ruff check .
+```
+
+```bash
+uv run black .
+```
+
+### Run
+
+```bash
+uv run python main.py
+```
