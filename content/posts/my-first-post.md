@@ -1,9 +1,9 @@
 +++
-date = '2025-10-07T07:50:38+09:00'
+date = '2025-10-07T08:00:00+09:00'
 draft = false
-title = 'My First Post'
-tags = ['hugo', 'blogging']
-categories = ['tutorial']
+title = 'My First Poem'
+tags = []
+categories = []
 +++
 
 Welcome to my first blog post! This is a sample post created with Hugo and the PaperMod theme.

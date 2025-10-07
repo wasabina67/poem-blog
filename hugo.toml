@@ -22,16 +22,8 @@ publishDir = 'docs'
   tocopen = false
 
 [params.homeInfoParams]
-  Title = "Welcome to My Blog"
-  Content = "A simple blog built with Hugo and PaperMod theme"
-
-[[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/"
-
-[[params.socialIcons]]
-  name = "twitter"
-  url = "https://twitter.com/"
+  Title = "Welcome to Poem blog"
+  Content = "content"
 
 [menu]
   [[menu.main]]
