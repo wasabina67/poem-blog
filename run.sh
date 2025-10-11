@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 THEMES=(
     "School Life" "Daily Work" "Family Time" "Friendship"
@@ -11,11 +12,12 @@ LEVELS=("beginner" "intermediate" "advanced")
 
 THEME="${THEMES[$RANDOM % ${#THEMES[@]}]}"
 LEVEL="${LEVELS[$RANDOM % ${#LEVELS[@]}]}"
-ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%z | sed 's/\(..\)$/:\1/')
+ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%:z)
 
 DATE=$(date +%Y-%m-%d)
 TIMESTAMP=$(date +%H%M%S)
-FILENAME="content/posts/${DATE}-${TIMESTAMP}-$(echo "$THEME" | sed 's/[^a-zA-Z0-9]/-/g' | tr '[:upper:]' '[:lower:]').md"
+THEME_SLUG=$(echo "$THEME" | tr '[:upper:]' '[:lower:]' | tr -s ' ' '-')
+FILENAME="content/posts/${DATE}-${TIMESTAMP}-${THEME_SLUG}.md"
 
 PROMPT="You are a creative writer for an English learning blog.
 
@@ -31,7 +33,7 @@ Requirements:
 2. Include practical examples
 3. Use natural, conversational tone
 
-Output format (please output EXACTLY in this format):
+Output format (you MUST follow this EXACTLY, including the +++ delimiters):
 +++
 date = '${ISO_DATE}'
 draft = false
