@@ -40,3 +40,5 @@ They make life better.
 Try a hobby today.
 It is fun and healthy.
 Start small and have fun.
+
+<audio controls><source src="/poem-blog/audio/2025-10-11-131857-enjoying-hobbies.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>

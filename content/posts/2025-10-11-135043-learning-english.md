@@ -20,3 +20,5 @@ Balance passive exposure like reading novels and watching films with active prod
 A practical tip is to record yourself telling a story, listen back, note three improvements, and re-record within a week.
 Sustain motivation by setting micro-goals and celebrating small victories, like understanding a joke or ordering confidently at a café.
 Over time these modest rituals accumulate into fluency that feels natural and expressive rather than forced.
+
+<audio controls><source src="/poem-blog/audio/2025-10-11-135043-learning-english.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>

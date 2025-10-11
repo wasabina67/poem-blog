@@ -22,3 +22,5 @@ You should also keep your devices updated and choose strong passwords to stay sa
 
 Start with one small change, like using a calendar app to plan your week.
 Over time you will notice more control and less stress, and technology will feel like a helpful partner.
+
+<audio controls><source src="/poem-blog/audio/2025-10-11-135614-using-technology.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
