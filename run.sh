@@ -45,8 +45,8 @@ categories = []
 llm "$PROMPT" > "$FILENAME"
 
 if [ $? -eq 0 ]; then
-    echo "success: blog post created at ${FILENAME}."
+    echo "Success: blog post created at ${FILENAME}."
 else
-    echo "error: failed to generate blog post with llm command."
+    echo "Error: failed to generate blog post with llm command."
     exit 1
 fi
