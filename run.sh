@@ -19,31 +19,7 @@ TIMESTAMP=$(date +%H%M%S)
 THEME_SLUG=$(echo "$THEME" | tr '[:upper:]' '[:lower:]' | tr -s ' ' '-')
 FILENAME="content/posts/${DATE}-${TIMESTAMP}-${THEME_SLUG}.md"
 
-PROMPT="You are a creative writer for an English learning blog.
-
-Write a short blog about the following theme: ${THEME}
-
-The difficulty level should be: ${LEVEL}
-- beginner: Simple vocabulary, short sentences, present tense
-- intermediate: Some varied vocabulary, mix of tenses, simple metaphors
-- advanced: Rich vocabulary, complex sentences, figurative language
-
-Requirements:
-1. Write 150-200 words
-2. Include practical examples
-3. Use natural, conversational tone
-4. IMPORTANT: Add a line break after every period (.) to make each sentence appear on a new line
-
-Output format (you MUST follow this EXACTLY, including the +++ delimiters):
-+++
-date = '${ISO_DATE}'
-draft = false
-title = '[Create an attractive title for the blog]'
-tags = []
-categories = []
-+++
-
-[Blog content here]"
+PROMPT=$(envsubst < PROMPT.txt)
 
 llm "$PROMPT" > "$FILENAME"
 
