@@ -15,6 +15,7 @@ FILENAME="content/posts/${DATE}-${TIMESTAMP}-${THEME_SLUG}.md"
 
 PROMPT=$(envsubst < PROMPT.txt)
 
+# Use default model
 llm "$PROMPT" > "$FILENAME"
 
 if [ $? -eq 0 ]; then
