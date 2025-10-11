@@ -21,4 +21,4 @@ Together we are strong and free.
 Every day brings something new,
 Dreams can come if we stay true.
 
-<audio controls><source src="/poem-blog/mp3/my-first-poem.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+<audio controls><source src="/poem-blog/audio/my-first-poem.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
