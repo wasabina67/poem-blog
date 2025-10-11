@@ -14,7 +14,8 @@ LEVEL="${LEVELS[$RANDOM % ${#LEVELS[@]}]}"
 ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%z | sed 's/\(..\)$/:\1/')
 
 DATE=$(date +%Y-%m-%d)
-FILENAME="content/posts/${DATE}-$(echo "$THEME" | sed 's/[^a-zA-Z0-9]/-/g' | tr '[:upper:]' '[:lower:]').md"
+TIMESTAMP=$(date +%H%M%S)
+FILENAME="content/posts/${DATE}-${TIMESTAMP}-$(echo "$THEME" | sed 's/[^a-zA-Z0-9]/-/g' | tr '[:upper:]' '[:lower:]').md"
 
 PROMPT="You are a creative writer for an English learning blog.
 
@@ -26,9 +27,9 @@ The difficulty level should be: ${LEVEL}
 - advanced: Rich vocabulary, complex sentences, figurative language
 
 Requirements:
-1. placeholder
-2. placeholder
-3. placeholder
+1. Write 150-200 words
+2. Include practical examples
+3. Use natural, conversational tone
 
 Output format (please output EXACTLY in this format):
 +++
@@ -44,8 +45,8 @@ categories = []
 llm "$PROMPT" > "$FILENAME"
 
 if [ $? -eq 0 ]; then
-    echo ""
+    echo "success: blog post created at ${FILENAME}."
 else
-    echo ""
+    echo "error: failed to generate blog post with llm command."
     exit 1
 fi
