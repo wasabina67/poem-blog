@@ -10,9 +10,9 @@ THEMES=(
 
 LEVELS=("beginner" "intermediate" "advanced")
 
-THEME="${THEMES[$RANDOM % ${#THEMES[@]}]}"
-LEVEL="${LEVELS[$RANDOM % ${#LEVELS[@]}]}"
-ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%:z)
+export THEME="${THEMES[$RANDOM % ${#THEMES[@]}]}"
+export LEVEL="${LEVELS[$RANDOM % ${#LEVELS[@]}]}"
+export ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%:z)
 
 DATE=$(date +%Y-%m-%d)
 TIMESTAMP=$(date +%H%M%S)
