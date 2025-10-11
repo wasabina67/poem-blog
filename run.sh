@@ -16,6 +16,8 @@ FILENAME="content/posts/${DATE}-${TIMESTAMP}-${THEME_SLUG}.md"
 PROMPT=$(envsubst < PROMPT.txt)
 
 # Use default model
+DEFAULT_MODEL=$(llm models default)
+echo "Using model: ${DEFAULT_MODEL}"
 llm "$PROMPT" > "$FILENAME"
 
 if [ $? -eq 0 ]; then
