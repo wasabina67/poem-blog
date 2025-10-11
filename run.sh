@@ -32,6 +32,7 @@ Requirements:
 1. Write 150-200 words
 2. Include practical examples
 3. Use natural, conversational tone
+4. IMPORTANT: Add a line break after every period (.) to make each sentence appear on a new line
 
 Output format (you MUST follow this EXACTLY, including the +++ delimiters):
 +++
