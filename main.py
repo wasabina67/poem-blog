@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 from openai import OpenAI
 
@@ -16,8 +17,29 @@ def tts(model: str, voice: str, text: str, output_file: str):
         f.write(response.content)
 
 
+def read_markdown_from_line9(markdown_file_path: str) -> str:
+    with open(markdown_file_path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    if len(lines) >= 9:
+        return "".join(lines[8:])
+    else:
+        return ""
+
+
 def main():
-    print("Hello from poem-blog!")
+    if len(sys.argv) < 2:
+        print("Usage: uv run python main.py <markdown_file_path>")
+        sys.exit(1)
+
+    markdown_file_path = sys.argv[1]
+
+    if not os.path.exists(markdown_file_path):
+        print(f"Error: File '{markdown_file_path}' not found")
+        sys.exit(1)
+
+    text = read_markdown_from_line9(markdown_file_path)
+    print(text)
 
 
 if __name__ == "__main__":
