@@ -1,13 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-THEMES=(
-    "School Life" "Daily Work" "Family Time" "Friendship"
-    "Playing Sports" "Listening to Music" "Cooking Food" "Weekend Travel"
-    "Staying Healthy" "Using Technology" "Enjoying Hobbies" "Four Seasons"
-    "Pet Care" "Going Shopping" "Home Sweet Home" "Learning English"
-)
-
+mapfile -t THEMES < THEMES.txt
 LEVELS=("beginner" "intermediate" "advanced")
 
 export THEME="${THEMES[$RANDOM % ${#THEMES[@]}]}"
