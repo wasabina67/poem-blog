@@ -16,21 +16,30 @@ ISO_DATE=$(date +%Y-%m-%dT%H:%M:%S%z | sed 's/\(..\)$/:\1/')
 DATE=$(date +%Y-%m-%d)
 FILENAME="content/posts/${DATE}-$(echo "$THEME" | sed 's/[^a-zA-Z0-9]/-/g' | tr '[:upper:]' '[:lower:]').md"
 
-PROMPT="
+PROMPT="You are a creative writer for an English learning blog.
 
-THEME: ${THEME}
-LEVEL: ${LEVEL}
+Write a short blog about the following theme: ${THEME}
 
-Output format (please output in this format):
+The difficulty level should be: ${LEVEL}
+- beginner: Simple vocabulary, short sentences, present tense
+- intermediate: Some varied vocabulary, mix of tenses, simple metaphors
+- advanced: Rich vocabulary, complex sentences, figurative language
+
+Requirements:
+1. placeholder
+2. placeholder
+3. placeholder
+
+Output format (please output EXACTLY in this format):
 +++
 date = '${ISO_DATE}'
 draft = false
-title = 'title'
+title = '[Create an attractive title for the blog]'
 tags = []
 categories = []
 +++
 
-"
+[Blog content here]"
 
 llm "$PROMPT" > "$FILENAME"
 
