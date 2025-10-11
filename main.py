@@ -39,7 +39,12 @@ def main():
         sys.exit(1)
 
     text = read_markdown_from_line9(markdown_file_path)
-    print(text)
+    if text == "":
+        print(f"Error: No text found from line 9 onwards in file: {markdown_file_path}")
+        sys.exit(1)
+
+    filename_without_ext = Path(markdown_file_path).stem
+    tts("tts-1", "alloy", text, f"static/audio/{filename_without_ext}.mp3")
 
 
 if __name__ == "__main__":
